@@ -1,0 +1,11 @@
+GNU Readline bindings for Standard ML
+Gian Perrone, October 2011
+
+This is possibly the crudest FFI binding ever created. It should not be held up
+as an example of a style to emulate.
+
+Running 'make' will build a binary readline-test, which uses the readline and
+history libraries to provide nice interactive text input.
+
+Compiling this will require that you have GNU Readline installed somewhere that
+is in your path.
