@@ -23,14 +23,21 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. *)
 
 val _ = Readline.using_history ()
 
-val s = Readline.readline "> "
-val _ = if size s > 0 then Readline.add_history s else ()
-val s' = Readline.readline ">> "
-val _ = if size s' > 0 then Readline.add_history s' else ()
-val s'' = Readline.readline ">>> "
-val _ = if size s'' > 0 then Readline.add_history s'' else ()
+fun isSome NONE = false
+  | isSome (SOME "") = false
+  | isSome _ = true
 
-val _ = print ("Wrote: " ^ s ^ "\n")
-val _ = print ("Wrote: " ^ s' ^ "\n")
-val _ = print ("Wrote: " ^ s'' ^ "\n")
+val s = Readline.readline "> "
+val _ = if isSome s then Readline.add_history (valOf s) else ()
+val s' = Readline.readline ">> "
+val _ = if isSome s' then Readline.add_history (valOf s') else ()
+val s'' = Readline.readline ">>> "
+val _ = if isSome s'' then Readline.add_history (valOf s'') else ()
+
+fun pp NONE = "EOF"
+  | pp (SOME s) = s
+
+val _ = print ("Wrote: " ^ pp s ^ "\n")
+val _ = print ("Wrote: " ^ pp s' ^ "\n")
+val _ = print ("Wrote: " ^ pp s'' ^ "\n")
 

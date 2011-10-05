@@ -72,7 +72,7 @@ struct
    fun readline prompt =
    let
       val s = readline' (CString.fromString prompt)
-      val t = CString.toStringVal s
+      val t = CString.toString s
       val _ = CString.free s
    in
       t
