@@ -1,0 +1,7 @@
+provides: readline 1.0.0
+remote: git git://github.com/standardml/readline.git
+description: MLton FFI bindings for GNU readline
+keywords: text, input
+bug-url: https://github.com/standardml/readline/issues
+maintainer: Gian Perrone <gdpe@itu.dk>
+license: MIT
