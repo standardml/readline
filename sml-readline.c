@@ -24,7 +24,7 @@ unsigned char *sml_rl_gets ( unsigned char *prompt )
   /* Get a line from the user. */
   line_read = (unsigned char *)readline (prompt);
 
-  if(line_read == NULL || *line_read == NULL) return NULL;
+  if(line_read == NULL) return NULL;
 
   return strdup(line_read);
 }
