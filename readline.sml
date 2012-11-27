@@ -57,7 +57,7 @@ struct
             else NONE
         end
 
-    (* FIXME: Perhaps we ought to do some UTF-8 convertion *)
+    (* FIXME: Perhaps we ought to do some UTF-8 conversion *)
     val toString = (Option.map Byte.bytesToString) o toVector
     fun toStringVal t = Option.getOpt(toString t, "")
 

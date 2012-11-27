@@ -41,3 +41,7 @@ val _ = print ("Wrote: " ^ pp s ^ "\n")
 val _ = print ("Wrote: " ^ pp s' ^ "\n")
 val _ = print ("Wrote: " ^ pp s'' ^ "\n")
 
+val t = pp s ^ pp s' ^ pp s''
+
+val _ = print ("Concat: " ^ t ^ "\n")
+
