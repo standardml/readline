@@ -1,4 +1,2 @@
-$(SML_LIB)/basis/basis.mlb
-$(SML_LIB)/basis/mlton.mlb
-readline.sml
+readline.mlb
 readline-test.sml
